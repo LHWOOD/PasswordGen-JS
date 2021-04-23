@@ -1,4 +1,5 @@
 // Assignment Code
+//Declaring a series of variables to global memory and assigning values of arrays
 var generateBtn = document.querySelector("#generate");
 
 var lowercase = [
@@ -74,7 +75,7 @@ var specialCharacter = [
 ];
 var possibleCode = [];
 
-// Write password to the #password input
+// this function takes the generated password and displays to id password
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -82,6 +83,7 @@ function writePassword() {
   passwordText.value = password;
 }
 
+// this function executes a series of prompts,confrims, or alerts to gather user information
 function generatePassword() {
   var passwordLength = prompt(
     "How long do you want your Password to be? (Passwords must be between 8 and 128 characters long.)"
