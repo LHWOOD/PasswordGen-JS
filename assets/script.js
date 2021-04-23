@@ -126,6 +126,7 @@ function generatePassword() {
   }
 
   var finalPassOp = possibleCode.flat();
+
   var arrayPass = [];
 
   for (var i = 0; i < passwordLength; i++) {
