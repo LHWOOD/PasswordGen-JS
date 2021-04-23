@@ -125,9 +125,15 @@ function generatePassword() {
     generatePassword();
   }
 
-  var index = Math.floor(Math.random() * passwordLength.length);
-  var password = possibleCode[index];
-  console.log(index);
+  // var index = Math.floor(Math.random() * passwordLength);
+  // var password = possibleCode[index];
+  // console.log(index);
+
+  for (var i = 0; i < passwordLength; i++) {
+    var random = Math.floor(Math.random() * possibleCode.length);
+    password = possibleCode[random];
+  }
+  console.log(password);
 }
 
 // Add event listener to generate button
