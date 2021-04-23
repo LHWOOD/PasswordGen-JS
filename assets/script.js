@@ -131,7 +131,7 @@ function generatePassword() {
 
   for (var i = 0; i < passwordLength; i++) {
     var random = Math.floor(Math.random() * possibleCode.length);
-    password = possibleCode[random];
+    var password = possibleCode[random];
   }
   console.log(password);
 }
