@@ -83,17 +83,19 @@ function writePassword() {
   passwordText.value = password;
 }
 
-// this function executes a series of prompts,confrims, or alerts to gather user information
+// this function executes a series of prompts, confrims, or alerts to gather user information
 function generatePassword() {
   var passwordLength = prompt(
     "How long do you want your Password to be? (Passwords must be between 8 and 128 characters long.)"
   );
+  //if password length does not fit the criteria, then it alerts and restarts
   if (passwordLength < 8 || passwordLength > 128) {
     alert("Passwords must be between 8 and 128 characters long!");
     generatePassword();
   } else {
     alert("You have selected " + passwordLength + " characters long");
   }
+  //the next three confirms gather user code preferences, alerts their response, and pushes to possibleCode array
   var lowercaseChoice = confirm(
     "Would you like your passcode to contain lowercase letters?"
   );
@@ -122,15 +124,16 @@ function generatePassword() {
     possibleCode.push(specialCharacter);
     alert("Special characters have been selected.");
   }
+  //if the user does not select atleast one critieria then alerts and starts over
   if (possibleCode == 0) {
     alert("Your password must contain values!");
     generatePassword();
   }
-
+  //creation of additional arrays that convert the possibleCode array or arrays to one array
   var finalPassOp = possibleCode.flat();
 
   var arrayPass = [];
-
+  //for loop to use the length of selected password and creates random code
   for (var i = 0; i < passwordLength; i++) {
     var random = Math.floor(Math.random() * finalPassOp.length);
     arrayPass.push(finalPassOp[random]);
