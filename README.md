@@ -10,7 +10,7 @@ No installation requirements are necessary.
 
 ## Usage
 
-`md ![screenshot](assets/images/PasswordGenScreenShot.png)
+![screenshot](assets/images/PasswordGenScreenShot.png)
 
 Link to webapp:
 https://lhwood.github.io/PasswordGen-JS/
